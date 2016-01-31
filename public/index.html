@@ -3,28 +3,39 @@
 <html>
 
    <head>
-      <title>Clementine.js - The elegant and lightweight full-stack boilerplate.</title>
-      <link href="http://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
-      <link href="/public/css/main.css" rel="stylesheet" type="text/css">  
+      <title>Url Shortner Microservice.</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link href="/public/css/main.css" rel="stylesheet" type="text/css">
    </head>
 
    <body>
       <div class="container">
-         <img src="/public/img/clementine_150.png" />
-         <br />
-         <p class="clementine-text">Clementine.js</p>
-      </div>
+         <div class="page-header">
+            <h1>Url Shortner Microservice</h1>
+         </div>
 
-      <div class="container">
-         <p>You have clicked the button <span id="click-nbr"></span> times.</p>   
-         <br />
-         <div class="btn-container">
-            <button type="submit" class="btn btn-add">CLICK ME!</button>
-            <button class="btn btn-delete">RESET</button>
+         <blockquote>
+            <h2>User stories:</h2>
+            <ul>
+               <li>User Story: I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+               <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+               <li>User Story: When I visit that shortened URL, it will redirect me to my original link.</li>
+            </ul>
+         </blockquote>
+
+         <div>
+           <h2>Example Usage:</h2>
+            <div>
+               <a href="/whoami">
+                  <code>http://rvg-req-header-parser.herokuapp.com/whoami</code>
+               </a>
+            </div>
+         </div>
+
+         <div>
+            <h2>Example Output</h2>
+            <code>{"ip_address":"127.0.0.1","operating_system":"Linux x86_64","language":"pt-BR"}</code>
          </div>
       </div>
-
-      <script type="text/javascript" src="/controllers/clickController.client.js"></script>   
    </body>
-
 </html>

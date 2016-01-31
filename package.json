@@ -1,28 +1,26 @@
 {
-  "name": "clementinejs",
-  "version": "1.0.2",
-  "description": "A light-weight MEAN stack boilerplate.",
+  "name": "rvg-url-shortiner",
+  "version": "1.0.0",
+  "description": "A url shortner app.",
   "main": "server.js",
   "scripts": {
-    "start": "gulp",
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs"
+    "url": "git+https://github.com/Rodrigo-Vargas/url-shortner"
   },
-  "homepage": "http://johnstonbl01.github.io/clementinejs/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs/issues",
+  "homepage": "http://rodrigovg.com.br",
+  "bugs": "https://github.com/Rodrigo-Vargas/url-shortner/issues",
   "keywords": [
-    "MEAN",
     "MongoDB",
     "Express",
-    "Angular",
     "Node",
     "javascript",
-    "boilerplate"
+    "url",
+    "shortner"
   ],
-  "author": "Blake Johnston",
+  "author": "Rodrigo Vargas",
   "license": "MIT",
   "dependencies": {
     "chai": "^3.5.0",

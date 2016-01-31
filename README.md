@@ -1,14 +1,9 @@
 # Url Shortner MicroService
 
 ## TODO
-* fix package.json
-* create github repository
-* add gitignore
 * fix index.html
-* fix port number of app
-* fix port number of mongodb
 * fix readme
-* fix database name
+
 
 ## User Stories
   

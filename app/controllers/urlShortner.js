@@ -42,6 +42,14 @@ function urlShortner (db) {
 
     var shortUrl = urlShortnerHelper.generateShortUrl(hostUrl)
 
+    var urlProjection = {  '_id': false }
+
+    var urlQuery = { 
+      "short_url": {
+        "$eq": shortUrl
+      }
+    }
+
     var insertObj = { 'original_url': req.params.url, 
                       'short_url' : shortUrl }
 
@@ -50,7 +58,13 @@ function urlShortner (db) {
          throw err;
       }
 
-      res.json(insertObj);
+       urls.findOne(urlQuery, urlProjection, function (err, url) {
+          if (err) {
+             throw err;
+          }
+
+          res.json(url);
+       });
     });
   }
 }
