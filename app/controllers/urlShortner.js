@@ -5,7 +5,7 @@ function urlShortner (db) {
 
   var urls = db.collection('urls');
 
-  this.getUrl = function(req, res){
+  this.redirectUrl = function(req, res){
     var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
     
     var urlQuery = { 
@@ -20,9 +20,13 @@ function urlShortner (db) {
       }
 
       if (result)
-        res.json(result);
-       else 
-          res.json({"error":"No short url found for given input"});         
+      {
+        res.redirect(result.original_url)
+      }
+      else
+      {
+        res.json({"error":"No short url found for given input"});         
+      }
     });
   }
 
@@ -30,7 +34,7 @@ function urlShortner (db) {
     var urlShortnerHelper = new UrlShortnerHelper();
     
     if (!urlShortnerHelper.isAValidUrl(req.params.url)){
-      res.json( { "error" : "URL invalid" } );
+      res.json( { "error" : "URL invalid. Valid format is http://www.example.com" } );
       return;
     }
 

@@ -10,9 +10,9 @@ module.exports = function (app, db) {
         res.sendFile(process.cwd() + '/public/index.html');
     });
 
-  app.route('/new/:url')
+  app.route('/new/:url(*)')
     .get(urlShortner.addUrl);
 
-  app.route('/:url')
-    .get(urlShortner.getUrl);
+  app.route('/:url(*)')
+    .get(urlShortner.redirectUrl);
 };
