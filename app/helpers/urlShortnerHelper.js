@@ -12,7 +12,7 @@ function urlShortnerHelper (){
   }
 
   this.isAValidUrl = function(url){
-    if (url.match(/^(http:\/\/www\.).+(\.com)$/) === null)
+    if (url.match(/^(http:\/\/www\.).+(\.com)(\/)*(.+)*$/) === null)
       return false;
     else
       return true;

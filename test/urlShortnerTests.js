@@ -20,6 +20,14 @@ describe("Url Shortner Tests ", function() {
     });
   });
 
+  describe("Validate 'http://www.'url.com/subdomain' url Format", function() {
+    it("validator must returning true", function() {
+      var valid  = urlShortnerHelper.isAValidUrl("http://www.freecodecamp.com/news");
+
+      expect(valid).to.equal(true);
+    });
+  });
+
   describe("Validate 'https://www.'' url Format", function() {
     it("validator must return false", function() {
       var valid  = urlShortnerHelper.isAValidUrl("https://www.google.com");
